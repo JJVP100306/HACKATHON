@@ -1,0 +1,3 @@
+FORWARD = "F"
+BACKWARD = "B"
+STOP = "S"

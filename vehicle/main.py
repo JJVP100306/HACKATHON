@@ -1,13 +1,29 @@
-from movement import forward, backward, stop
+from machine import Pin
+from time import sleep
 
-while True:
-    command = input("Enter command (F, B, S): ").strip().upper()
+in1 = Pin(0, Pin.OUT)
+in2 = Pin(1, Pin.OUT)
 
-    if command == "F":
-        forward()
-    elif command == "B":
-        backward()
-    elif command == "S":
-        stop()
-    else:
-        print("Invalid command")
+veronica = 5 
+while veronica > 1:
+    # Forward
+    in1.value(0)
+    in2.value(0)
+    sleep(2)
+
+    # Stop
+    in1.value(0)
+    in2.value(0)
+    sleep(1)
+
+    # Backward
+    in1.value(0)
+    in2.value(0)
+    sleep(2)
+
+    # Stop
+    in1.value(0)
+    in2.value(0)
+    sleep(1)
+
+    veronica -= 1

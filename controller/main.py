@@ -1,9 +1,10 @@
-#Joystick input, sendind commands 
 from machine import Pin
 from time import sleep
 
-led = Pin(25, Pin.OUT)  # more reliable than "LED"
+led = Pin(25, Pin.OUT)   # 25 is built-in LED on many boards (like Pico)
 
 while True:
-    led.toggle()
-    sleep(0.5)
+    led.value(1)   # ON
+    sleep(1)
+    led.value(0)   # OFF
+    sleep(1)
